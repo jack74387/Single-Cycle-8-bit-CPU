@@ -43,7 +43,7 @@ The processor follows a simple instruction encoding scheme where the operation c
   </tr>
   <tr>
     <td><b>and</b></td>
-    <td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>rd</td><td>ra</td><td>rb</td><td></td>
+    <td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>rd</td><td>ra</td><td>rb</td>
     <td>$rd = $ra &amp; $rb</td>
   </tr>
   <tr>
@@ -63,17 +63,17 @@ The processor follows a simple instruction encoding scheme where the operation c
   </tr>
   <tr>
     <td><b>lw</b></td>
-    <td>0</td><td>1</td><td>0</td><td><b>rd</b></td><td colspan="4"><b>immediate</b></td>
+    <td>0</td><td>1</td><td>0</td><td>rd</td><td colspan="4">immediate</td>
     <td>$rd = MEM[imm]</td>
   </tr>
   <tr>
     <td><b>ori</b></td>
-    <td>1</td><td>0</td><td>1</td><td><b>rd</b></td><td colspan="4"><b>immediate</b></td>
+    <td>1</td><td>0</td><td>1</td><td>rd</td><td colspan="4">immediate</td>
     <td>$rd = $rd | imm</td>
   </tr>
   <tr>
     <td><b>beq</b></td>
-    <td>1</td><td>1</td><td>1</td><td colspan="5"><b>offset</b></td>
+    <td>1</td><td>1</td><td>1</td><td colspan="5">offset</td>
     <td>Branch if $ra == $rb</td>
   </tr>
 </table>
