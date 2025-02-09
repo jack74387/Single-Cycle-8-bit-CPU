@@ -22,7 +22,7 @@ The processor follows a simple instruction encoding scheme where the operation c
 | ori  | 1 | 0 | 1 | rd| immediate|||     | `$rd = $rd | imm`                    |
 | beq  | 1 | 1 | 1 | offset          ||||  | Branch if `$ra == $rb`               |
 
-```
+
 <table border="1" cellspacing="0" cellpadding="5">
   <tr>
     <th>Bit</th>
@@ -72,9 +72,19 @@ The processor follows a simple instruction encoding scheme where the operation c
     <td>MEM[imm] = $rd</td>
   </tr>
   <tr>
+    <td><b>lui</b></td>
+    <td>1</td><td>0</td><td>0</td><td><b>rd</b></td><td colspan="4"><b>immediate</b></td>
+    <td>$rd = imm &lt;&lt; 4</td>
+  </tr>
+  <tr>
     <td><b>ori</b></td>
     <td>1</td><td>0</td><td>1</td><td><b>rd</b></td><td colspan="4"><b>immediate</b></td>
     <td>$rd = $rd | imm</td>
+  </tr>
+  <tr>
+    <td><b>j</b></td>
+    <td>1</td><td>1</td><td>0</td><td colspan="5"><b>address</b></td>
+    <td>Jump</td>
   </tr>
   <tr>
     <td><b>beq</b></td>
@@ -82,7 +92,9 @@ The processor follows a simple instruction encoding scheme where the operation c
     <td>Branch if $ra == $rb</td>
   </tr>
 </table>
-```
+
+
+
 
 ---
 
