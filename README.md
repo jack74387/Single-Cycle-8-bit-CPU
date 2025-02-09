@@ -11,18 +11,6 @@ The processor follows a simple instruction encoding scheme where the operation c
 - Supports arithmetic, logical, and branching instructions.
 
 ### Instruction Encoding Table
-| Bit  | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | Description                          |
-|------|---|---|---|---|---|---|---|---|--------------------------------------|
-| nop  | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | No operation                         |
-| and  | 0 | 0 | 1 | 0 | 0 | rd| ra| rb| `$rd = $ra & $rb`                    |
-| or   | 0 | 0 | 1 | 0 | 1 | rd| ra| rb| `$rd = $ra | $rb`                    |
-| add  | 0 | 0 | 1 | 1 | 0 | rd| ra| rb| `$rd = $ra + $rb`                    |
-| sub  | 0 | 0 | 1 | 1 | 1 | rd| ra| rb| `$rd = $ra - $rb`                    |
-| lw   | 0 | 1 | 0 | rd| immediate|||     | `$rd = MEM[imm]`                     |
-| ori  | 1 | 0 | 1 | rd| immediate|||     | `$rd = $rd | imm`                    |
-| beq  | 1 | 1 | 1 | offset          ||||  | Branch if `$ra == $rb`               |
-
-
 <table border="1" cellspacing="0" cellpadding="5" style="border-color: rgb(239, 239, 239);">
   <tr>
     <th>Bit</th>
@@ -77,9 +65,6 @@ The processor follows a simple instruction encoding scheme where the operation c
     <td>Branch if $ra == $rb</td>
   </tr>
 </table>
-
-
-
 
 ---
 
