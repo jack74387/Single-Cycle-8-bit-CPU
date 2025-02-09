@@ -18,18 +18,18 @@ The processor follows a simple instruction encoding scheme where the operation c
 | or   | 0 | 0 | 1 | 0 | 1 | rd| ra| rb| `$rd = $ra | $rb`                    |
 | add  | 0 | 0 | 1 | 1 | 0 | rd| ra| rb| `$rd = $ra + $rb`                    |
 | sub  | 0 | 0 | 1 | 1 | 1 | rd| ra| rb| `$rd = $ra - $rb`                    |
-| lw   | 0 | 1 | 0 | rd| immediate     | `$rd = MEM[imm]`                     |
-| ori  | 1 | 0 | 1 | rd| immediate     | `$rd = $rd | imm`                    |
-| beq  | 1 | 1 | 1 | offset            | Branch if `$ra == $rb`               |
+| lw   | 0 | 1 | 0 | rd| immediate|||     | `$rd = MEM[imm]`                     |
+| ori  | 1 | 0 | 1 | rd| immediate|||     | `$rd = $rd | imm`                    |
+| beq  | 1 | 1 | 1 | offset          |||  | Branch if `$ra == $rb`               |
 
 ---
 
 #### Notes
 - **nop:** No operation is performed.  
 - **Arithmetic operations:** Support basic logical and arithmetic functions (`and`, `or`, `add`, `sub`).  
-- **lw:** Loads data from memory into the register `$rd`.(<span style="color:red">immediate uses un-signed extension</span>)     
-- **ori:** Bitwise OR between the register and immediate value.(<span style="color:red">immediate uses un-signed extension</span>)   
-- **beq:** Branches to an offset if the two registers are equal.(<span style="color:red">offset uses signed extension</span>)  
+- **lw:** Loads data from memory into the register `$rd`.(**immediate uses un-signed extension**)     
+- **ori:** Bitwise OR between the register and immediate value.(**immediate uses un-signed extension**)   
+- **beq:** Branches to an offset if the two registers are equal.(**offset uses signed extension**)  
 
 ### Branching Behavior
 The `beq` instruction operates similarly to MIPS:
@@ -38,7 +38,7 @@ if $ra == $rb:
   PC = PC + 1 + offset
 else:
   PC = PC + 1
-
+```
 ---
 
 ### CPU Circuit Diagram
