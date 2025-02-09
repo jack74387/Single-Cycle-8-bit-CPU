@@ -1,0 +1,71 @@
+<table border="1" cellspacing="0" cellpadding="5" style="border-color: rgb(239, 239, 239);">
+    <tr>
+      <th>Bit</th>
+      <th>7</th>
+      <th>6</th>
+      <th>5</th>
+      <th>4</th>
+      <th>3</th>
+      <th>2</th>
+      <th>1</th>
+      <th>0</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><b>nop</b></td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+      <td>No operation</td>
+    </tr>
+    <tr>
+      <td><b>and</b></td>
+      <td>0</td><td>0</td><td>1</td><td>0</td><td><b>rd</b></td><td><b>ra</b></td><td><b>rb</b></td><td></td>
+      <td>$rd = $ra &amp; $rb</td>
+    </tr>
+    <tr>
+      <td><b>or</b></td>
+      <td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td><b>rd</b></td><td><b>ra</b></td><td><b>rb</b></td>
+      <td>$rd = $ra | $rb</td>
+    </tr>
+    <tr>
+      <td><b>add</b></td>
+      <td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td><b>rd</b></td><td><b>ra</b></td><td><b>rb</b></td>
+      <td>$rd = $ra + $rb</td>
+    </tr>
+    <tr>
+      <td><b>sub</b></td>
+      <td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td><b>rd</b></td><td><b>ra</b></td><td><b>rb</b></td>
+      <td>$rd = $ra - $rb</td>
+    </tr>
+    <tr>
+      <td><b>lw</b></td>
+      <td>0</td><td>1</td><td>0</td><td><b>rd</b></td><td colspan="4"><b>immediate</b></td>
+      <td>$rd = MEM[imm]</td>
+    </tr>
+    <tr>
+      <td><b>sw</b></td>
+      <td>0</td><td>1</td><td>1</td><td><b>rd</b></td><td colspan="4"><b>immediate</b></td>
+      <td>MEM[imm] = $rd</td>
+    </tr>
+    <tr>
+      <td><b>lui</b></td>
+      <td>1</td><td>0</td><td>0</td><td><b>rd</b></td><td colspan="4"><b>immediate</b></td>
+      <td>$rd = imm &lt;&lt; 4</td>
+    </tr>
+    <tr>
+      <td><b>ori</b></td>
+      <td>1</td><td>0</td><td>1</td><td><b>rd</b></td><td colspan="4"><b>immediate</b></td>
+      <td>$rd = $rd | imm</td>
+    </tr>
+    <tr>
+      <td><b>j</b></td>
+      <td>1</td><td>1</td><td>0</td><td colspan="5"><b>address</b></td>
+      <td>Jump</td>
+    </tr>
+    <tr>
+      <td><b>beq</b></td>
+      <td>1</td><td>1</td><td>1</td><td colspan="5"><b>offset</b></td>
+      <td>Branch if $ra == $rb</td>
+    </tr>
+  </table>
+  
+  

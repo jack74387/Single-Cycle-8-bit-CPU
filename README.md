@@ -23,7 +23,7 @@ The processor follows a simple instruction encoding scheme where the operation c
 | beq  | 1 | 1 | 1 | offset          ||||  | Branch if `$ra == $rb`               |
 
 
-<table border="1" cellspacing="0" cellpadding="5">
+<table border="1" cellspacing="0" cellpadding="5" style="border-color: rgb(239, 239, 239);">
   <tr>
     <th>Bit</th>
     <th>7</th>
