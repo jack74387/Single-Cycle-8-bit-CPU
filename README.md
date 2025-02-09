@@ -43,22 +43,22 @@ The processor follows a simple instruction encoding scheme where the operation c
   </tr>
   <tr>
     <td><b>and</b></td>
-    <td>0</td><td>0</td><td>1</td><td>0</td><td><b>rd</b></td><td><b>ra</b></td><td><b>rb</b></td><td></td>
+    <td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>rd</td><td>ra</td><td>rb</td><td></td>
     <td>$rd = $ra &amp; $rb</td>
   </tr>
   <tr>
     <td><b>or</b></td>
-    <td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td><b>rd</b></td><td><b>ra</b></td><td><b>rb</b></td>
+    <td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>rd</td><td>ra</td><td>rb</td>
     <td>$rd = $ra | $rb</td>
   </tr>
   <tr>
     <td><b>add</b></td>
-    <td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td><b>rd</b></td><td><b>ra</b></td><td><b>rb</b></td>
+    <td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>rd</td><td>ra</td><td>rb</td>
     <td>$rd = $ra + $rb</td>
   </tr>
   <tr>
     <td><b>sub</b></td>
-    <td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td><b>rd</b></td><td><b>ra</b></td><td><b>rb</b></td>
+    <td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>rd</td><td>ra</td><td>rb</td>
     <td>$rd = $ra - $rb</td>
   </tr>
   <tr>
@@ -67,24 +67,9 @@ The processor follows a simple instruction encoding scheme where the operation c
     <td>$rd = MEM[imm]</td>
   </tr>
   <tr>
-    <td><b>sw</b></td>
-    <td>0</td><td>1</td><td>1</td><td><b>rd</b></td><td colspan="4"><b>immediate</b></td>
-    <td>MEM[imm] = $rd</td>
-  </tr>
-  <tr>
-    <td><b>lui</b></td>
-    <td>1</td><td>0</td><td>0</td><td><b>rd</b></td><td colspan="4"><b>immediate</b></td>
-    <td>$rd = imm &lt;&lt; 4</td>
-  </tr>
-  <tr>
     <td><b>ori</b></td>
     <td>1</td><td>0</td><td>1</td><td><b>rd</b></td><td colspan="4"><b>immediate</b></td>
     <td>$rd = $rd | imm</td>
-  </tr>
-  <tr>
-    <td><b>j</b></td>
-    <td>1</td><td>1</td><td>0</td><td colspan="5"><b>address</b></td>
-    <td>Jump</td>
   </tr>
   <tr>
     <td><b>beq</b></td>
